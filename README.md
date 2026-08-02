@@ -2,9 +2,11 @@
 
 Estudos e documentação de testes de APIs REST utilizando **Postman** e **APIs públicas**, com foco em organização, boas práticas e validação de endpoints.
 
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![REST API](https://img.shields.io/badge/REST-API-blue?style=for-the-badge)
-![QA](https://img.shields.io/badge/QA-Analyst-success?style=for-the-badge)
+[![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
+
+[![REST API](https://img.shields.io/badge/REST-API-blue?style=for-the-badge)](https://restfulapi.net/)
+
+[![QA](https://img.shields.io/badge/QA-Analyst-success?style=for-the-badge)](https://estersousa12.github.io/portfolio/)
 
 ---
 
