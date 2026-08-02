@@ -1,41 +1,39 @@
 # 🧪 Postman for QA
 
-Estudos e documentação de testes de APIs REST utilizando **Postman** e **APIs públicas**, com foco em organização, boas práticas e validação de endpoints.
+Estudos e documentação de testes de **APIs REST** utilizando **Postman**, aplicados sobre **APIs públicas**, com foco em organização, boas práticas e validação de endpoints.
 
-[![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
-
-[![REST API](https://img.shields.io/badge/REST-API-blue?style=for-the-badge)](https://restfulapi.net/)
-
-[![QA](https://img.shields.io/badge/QA-Analyst-success?style=for-the-badge)](https://estersousa12.github.io/portfolio/)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![REST API](https://img.shields.io/badge/REST-API-blue?style=for-the-badge)
+![QA](https://img.shields.io/badge/QA-Analyst-success?style=for-the-badge)
 
 ---
 
 # 📌 Sobre o projeto
 
-Este repositório reúne estudos práticos de testes de APIs REST utilizando o Postman.
+Este repositório reúne estudos práticos de testes de APIs REST utilizando o **Postman**.
 
-O objetivo é demonstrar como estruturo testes de API como Analista de QA, organizando coleções, ambientes, documentação técnica e validações automatizadas utilizando scripts do Postman.
+O objetivo é demonstrar como organizo testes de APIs como **QA Analyst**, utilizando Collections, Environments, documentação técnica e scripts automatizados para validação das respostas.
 
-Todas as implementações utilizam **APIs públicas**, sem exposição de dados sensíveis ou credenciais reais.
+Todos os exemplos utilizam **APIs públicas**, sem exposição de dados sensíveis ou credenciais reais.
 
 ---
 
-# 🚀 Objetivos
+# 🎯 Objetivos
 
 - Documentar testes de APIs REST
 - Organizar Collections do Postman
-- Utilizar Environments
-- Validar Status Codes
+- Utilizar Environments reutilizáveis
+- Demonstrar boas práticas de documentação
+- Validar Status Code
 - Validar Response Body
-- Validar tempo de resposta
-- Automatizar validações utilizando Scripts (pm.test)
-- Aplicar boas práticas de documentação
+- Automatizar verificações utilizando scripts (`pm.test`)
+- Compartilhar exemplos para estudos de QA
 
 ---
 
-# 📂 Estrutura do projeto
+# 📁 Estrutura do projeto
 
-```
+```text
 postman-for-qa
 │
 ├── collections
@@ -61,6 +59,8 @@ postman-for-qa
 - APIs REST Públicas
 - JSON
 - JavaScript (Scripts do Postman)
+- JSON Schema
+- Newman
 - Markdown
 - Git
 - GitHub
@@ -72,37 +72,39 @@ postman-for-qa
 - Collections organizadas
 - Environments reutilizáveis
 - Documentação das requisições
-- Exemplos de GET
-- Exemplos de POST
-- Exemplos de PUT
-- Exemplos de DELETE
-- Exemplos de autenticação
-- Scripts de testes
-- Validação de respostas
+- Testes do método GET
+- Testes do método POST
+- Testes do método PUT
+- Testes do método DELETE
+- Fluxo de autenticação
+- Scripts automatizados (`pm.test`)
+- Validação de Status Code
+- Validação do Response Body
+- Boas práticas para testes de APIs
 
 ---
 
-# 📁 Organização das pastas
+# 📂 Organização das pastas
 
-## 📂 collections
+## 📁 collections
 
 Armazena as Collections do Postman utilizadas durante os estudos.
 
 ---
 
-## 📂 documentation
+## 📁 documentation
 
 Documentação técnica do projeto, incluindo fluxo de autenticação e informações complementares.
 
 ---
 
-## 📂 environments
+## 📁 environments
 
 Configuração dos ambientes utilizados nas execuções das Collections.
 
 ---
 
-## 📂 requests
+## 📁 requests
 
 Documentação individual das requisições implementadas (GET, POST, PUT e DELETE).
 
@@ -112,9 +114,9 @@ Documentação individual das requisições implementadas (GET, POST, PUT e DELE
 
 **Ester de Sousa**
 
-QA Analyst
+**QA Analyst | Testes Funcionais | Testes Exploratórios | APIs REST | Azure DevOps | SQL Server**
 
-Experiência em:
+### Experiência em
 
 - Testes Funcionais
 - Testes Exploratórios
@@ -129,12 +131,12 @@ Experiência em:
 
 ### 💼 Portfólio
 
-<https://estersousa12.github.io/portfolio/>
+https://estersousa12.github.io/portfolio/
 
 ### 🔗 LinkedIn
 
-<https://www.linkedin.com/in/ester-de-sousa-666265248/>
+https://www.linkedin.com/in/ester-de-sousa-666265248/
 
 ---
 
-⭐ Este repositório faz parte do meu portfólio profissional e demonstra minha organização, documentação e execução de testes de APIs utilizando o Postman.
+⭐ Este projeto integra meu portfólio profissional como **QA Analyst** e demonstra minha abordagem na organização, documentação e execução de testes de APIs REST utilizando **Postman** e boas práticas de qualidade de software.
