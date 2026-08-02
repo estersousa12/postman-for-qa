@@ -1,110 +1,138 @@
-# Authentication
+# 🔐 Authentication
 
-## Objetivo
-
-Apresentar os principais métodos de autenticação utilizados em APIs REST e como configurá-los no Postman.
+Esta documentação descreve como funciona a autenticação utilizada neste projeto utilizando a **Fake Store API**.
 
 ---
 
-# Basic Auth
+# 🎯 Objetivo
 
-Utiliza usuário e senha enviados na requisição.
+Demonstrar o fluxo de autenticação utilizando um endpoint de login que retorna um **JWT (JSON Web Token)** para fins de estudo.
 
-### Exemplo
+Embora este projeto utilize uma API pública, a documentação segue o mesmo padrão utilizado em projetos reais de testes de APIs REST.
+
+---
+
+# 🔗 Endpoint
+
+**Método HTTP**
+
+```http
+POST
+```
+
+**URL**
 
 ```text
-Username: admin
-Password: 123456
+{{base_url}}/auth/login
 ```
-
-### Configuração no Postman
-
-Authorization → Type → Basic Auth
-
-Preencha:
-
-- Username
-- Password
 
 ---
 
-# Bearer Token (JWT)
+# 📦 Request Body
 
-É o método mais utilizado atualmente.
+```json
+{
+  "username": "mor_2314",
+  "password": "83r5^_"
+}
+```
 
-O token é enviado no Header da requisição.
+Essas credenciais são disponibilizadas oficialmente pela Fake Store API para demonstração.
 
-### Exemplo
+---
+
+# ✅ Resposta esperada
+
+Status Code
+
+```text
+200 OK
+```
+
+Exemplo
+
+```json
+{
+  "token":"eyJhbGciOiJIUzI1NiIsInR..."
+}
+```
+
+---
+
+# ✔️ O que é validado
+
+- Status Code 200
+- Presença da propriedade `token`
+- Token retornado como String
+- Tempo de resposta
+
+---
+
+# 💻 Script de validação (Postman)
+
+```javascript
+pm.test("Status Code é 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Token retornado", function () {
+    const body = pm.response.json();
+    pm.expect(body).to.have.property("token");
+});
+
+pm.test("Token é String", function () {
+    const body = pm.response.json();
+    pm.expect(body.token).to.be.a("string");
+});
+
+pm.test("Tempo de resposta menor que 2000 ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(2000);
+});
+```
+
+---
+
+# 🔒 Armazenando o Token
+
+Após a autenticação, o token pode ser armazenado automaticamente em uma variável de ambiente do Postman.
+
+Exemplo:
+
+```javascript
+const body = pm.response.json();
+
+pm.environment.set("token", body.token);
+```
+
+Posteriormente, basta utilizar:
+
+```
+{{token}}
+```
+
+nas requisições autenticadas.
+
+---
+
+# 📌 Utilização no Header
 
 ```http
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI...
+Authorization: Bearer {{token}}
 ```
 
-### Configuração no Postman
-
-Authorization → Type → Bearer Token
-
-Cole o Token no campo Token.
-
 ---
 
-# API Key
+# ✅ Boas práticas
 
-Utilizada por diversas APIs públicas.
-
-Pode ser enviada no Header ou na URL.
-
-### Exemplo no Header
-
-```http
-x-api-key: SUA_API_KEY
-```
-
-### Configuração no Postman
-
-Authorization → Type → API Key
-
-Informe:
-
-- Key
-- Value
-- Add to: Header
-
----
-
-# OAuth 2.0
-
-Utilizado em aplicações que exigem login do usuário.
-
-Exemplos:
-
-- Google APIs
-- Microsoft Graph
-- GitHub API
-
-No Postman:
-
-Authorization → OAuth 2.0
-
-É possível gerar automaticamente o Access Token.
-
----
-
-# Boas práticas
-
-- Nunca compartilhar Tokens.
-- Não salvar senhas em repositórios públicos.
+- Nunca armazenar Tokens reais no GitHub.
 - Utilizar variáveis de ambiente para credenciais.
 - Renovar Tokens quando expirarem.
-- Utilizar HTTPS em produção.
+- Nunca compartilhar credenciais em repositórios públicos.
 
 ---
 
-# Resumo
+# 📝 Observações
 
-| Método | Mais utilizado |
-|---------|----------------|
-| Basic Auth | Sistemas internos |
-| Bearer Token | APIs REST modernas |
-| API Key | APIs públicas |
-| OAuth 2.0 | Grandes aplicações |
+- A Fake Store API disponibiliza credenciais apenas para fins de estudo.
+- O JWT retornado é utilizado somente para demonstração do fluxo de autenticação.
+- Nenhuma credencial real é utilizada neste projeto.
