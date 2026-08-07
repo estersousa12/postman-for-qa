@@ -7,7 +7,7 @@ Projeto desenvolvido para prática e demonstração de testes de APIs REST utili
 - Collections organizadas por API
 - Environments para configuração de ambientes
 - Requisições GET, POST, PUT e DELETE
-- Validação de Status Codes
+- Validação de Status Code
 - Validação de Response Body
 - Validação de Schema
 - Scripts de testes no Postman
